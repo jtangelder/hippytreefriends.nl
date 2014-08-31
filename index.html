@@ -1,2 +1,140 @@
-hippytreefriends.nl
-===================
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Hippy Tree Friends Collective</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Codystar:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
+		<style>
+      html, body {
+        position: relative;
+        height: 100%;
+      }
+      
+			body {
+				background: black url(foto-small.jpg) no-repeat 50% 50%;
+				background-size: 100% 100%;
+				margin: 0;
+				overflow: hidden;
+        -webkit-transition: background-size 1s;
+        transition: background-size 1s;
+			}
+
+			.content {
+				position: absolute;
+				z-index: 1;
+				top: 30%;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				color:#fff;
+      }
+      
+      .content h1 {        
+        font: 30px Codystar, sans-serif;
+        text-shadow: 0 0 4px #000;
+			}
+      
+      .content p a {
+        font: 200 18px 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+				color: rgba(255,255,255,.8);
+        text-shadow: 0 0 4px #000;
+      }
+      
+      .social {
+        background: rgba(0,0,0,.4);
+        padding: 5px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+      }
+      
+      @media (min-width: 700px) {
+        body { background-image: url(foto.jpg); }
+        .content h1 { font-size: 50px; }
+      }
+
+		</style>
+
+	</head>
+	<body>
+
+    <div class="content">
+      <h1>Hippy Tree Friends Collective</h1>
+      <p><a href="http://www.dreamordonate.nl/407-hippy-tree-friends-op-vinyl">Help ons met het uitbrengen van onze plaat</a></p>
+    </div>
+  
+    
+    <div class="social">
+      <div class="fb-like" 
+           data-href="https://www.facebook.com/hippytreefriendscollective" 
+           data-layout="standard" 
+           data-action="like" 
+           data-show-faces="false" 
+           data-colorscheme="dark"
+           data-share="true"></div>
+    </div>
+
+    <script type="text/javascript">
+      
+      var raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
+      if(raf) {
+        var ticking = false;
+        var mouse_x = Math.random();
+        var mouse_y = Math.random();
+        var body_style = document.body.style;
+        
+        function tick() {
+          var width = 100 + Math.abs(Math.sin(mouse_x) * 4);
+          var height = 100 + Math.abs(Math.cos(mouse_y) * 4);
+          
+          body_style.backgroundSize = ''+width+'% '+height+'%';          
+          ticking = false;
+        }
+        
+        function requestTick() {
+          if(!ticking) {
+            ticking = true;
+            raf(tick);
+          }
+        }
+        
+        function onmousemove(ev) {
+          requestTick();
+          mouse_x = ev.clientX;
+          mouse_y = ev.clientY;
+        }
+        
+        window.addEventListener("mousemove", onmousemove, false);
+        window.addEventListener("touchmove", onmousemove, false);
+        
+        requestTick();
+      }
+      
+      
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39365276-3']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+      
+		</script>
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=200591890057341";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+	</body>
+</html>

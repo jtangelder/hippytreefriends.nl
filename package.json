@@ -1,0 +1,30 @@
+{
+  "name": "htfc",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "webpack -d -w",
+    "build": "webpack -p"
+  },
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "node-sass": "^3.4.2",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-emoji": "^0.4.1",
+    "react-redux": "^4.0.0",
+    "redux": "^3.0.0",
+    "youtube-player": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^5.6.18",
+    "babel-loader": "^5.1.4",
+    "babel-plugin-react-transform": "^1.1.0",
+    "node-libs-browser": "^0.5.2",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "^0.14.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.9.11"
+  }
+}

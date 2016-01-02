@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 import YouTubePlayerAPI from 'youtube-player';
 
+const STATE_ENDED = 0;
+
 class YouTubePlayer extends Component {
   componentDidMount() {
     const player = YouTubePlayerAPI(findDOMNode(this));
@@ -11,6 +13,13 @@ class YouTubePlayer extends Component {
     if (this.props.volume > 0) {
       player.playVideo();
     }
+
+    // loop the video
+    player.on('stateChange', function (event) {
+      if (event.data === STATE_ENDED) {
+        player.seekTo(0);
+      }
+    });
 
     this.player = player;
   }
@@ -24,9 +33,11 @@ class YouTubePlayer extends Component {
       this.player.loadVideoById(this.props.videoId);
     }
 
-    (this.props.volume === 0) ?
-        this.player.stopVideo() :
-        this.player.playVideo();
+    if (prevProps.volume !== this.props.volume) {
+      (this.props.volume === 0) ?
+          this.player.pauseVideo() :
+          this.player.playVideo();
+    }
   }
 
   render() {
@@ -42,7 +53,7 @@ YouTubePlayer.propTypes = {
 };
 
 YouTubePlayer.defaultProps = {
-  volume: 100
+  volume: 75
 };
 
 export default YouTubePlayer;

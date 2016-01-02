@@ -39,8 +39,26 @@ export default [
   },
   {
     id: uniqId(),
+    videoId: 'Y774OIvh1fs',
+    emoji: 'cloud',
+    volume: 0
+  },
+  {
+    id: uniqId(),
+    videoId: 'HLpWzjUuuD4',
+    emoji: 'cow',
+    volume: 0
+  },
+  {
+    id: uniqId(),
     videoId: 'IWVaqk4H7b0',
     emoji: 'cat',
+    volume: 0
+  },
+  {
+    id: uniqId(),
+    videoId: 'OW7TH2U4hps',
+    emoji: 'star',
     volume: 0
   }
 ];

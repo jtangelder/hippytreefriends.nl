@@ -45,12 +45,6 @@ export default [
   },
   {
     id: uniqId(),
-    videoId: 'HLpWzjUuuD4',
-    emoji: 'cow',
-    volume: 0
-  },
-  {
-    id: uniqId(),
     videoId: 'IWVaqk4H7b0',
     emoji: 'cat',
     volume: 0

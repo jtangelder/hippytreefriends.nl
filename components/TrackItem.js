@@ -22,6 +22,7 @@ class TrackItem extends Component {
         <input
             type="range" min="0" max="100" step="1" orient="vertical"
             defaultValue={track.volume}
+            onMouseUp={this.handleVolumeChange.bind(this)}
             onChange={this.handleVolumeChange.bind(this)}
         />
         <span className="emoji">{Emoji.emojify(`:${track.emoji}:`)}</span>
